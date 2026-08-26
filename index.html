@@ -195,8 +195,7 @@ main{position:relative;z-index:2}
     </div>
     <nav class="sb-nav" aria-label="Section navigation">
       <a href="#hero" class="sb-link mono">00 / IDENTITY</a>
-      <a href="#systems" class="sb-link mono">01 / SYSTEMS</a>
-      <a href="#projects" class="sb-link mono">02 / PROJECTS</a>
+      <a href="#projects" class="sb-link mono">01 / PROJECTS</a>
     </nav>
     <div class="sb-group sb-group--right">
       <span class="pulse-dot violet"></span>
@@ -220,7 +219,7 @@ main{position:relative;z-index:2}
         Engineering <em>aerodynamic systems</em><br>for <span class="hero__title-accent">performance</span>.
       </h1>
       <p class="hero__lede reveal" style="transition-delay:140ms">
-        My name is Pranit Malhotra. I am a pre-university engineering student. I have Works across fluid-dynamics analysis, parametric CAD and in-house experimental validation as a single coupled method. Every design decision is traceable to a simulated or measured outcome. I pride myself in my work in fluid dynamics and hope to engineer a new and better world through it
+        Hi!, My name is Pranit Malhotra. I am a pre-university engineering student. I works across fluid-dynamics analysis, parametric CAD and in-house experimental validation as a single coupled method. Every design decision is traceable to a simulated or measured outcome. I pride myself in my work in fluid dynamics and hope to engineer a new and better world through it
       </p>
       <div class="hero__discipline-row reveal" style="transition-delay:220ms">
         <span class="discipline"><span class="discipline__code mono">FLD</span><span class="discipline__label">Fluid Dynamics</span></span>
@@ -229,10 +228,7 @@ main{position:relative;z-index:2}
         <span class="hero__discipline-sep"></span>
         <span class="discipline"><span class="discipline__code mono">EXP</span><span class="discipline__label">Experimental Research</span></span>
       </div>
-      <a href="#systems" class="hero__cta reveal mono" style="transition-delay:320ms">
-        <span>View my systems</span>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5V12.5M7 12.5L2.5 8M7 12.5L11.5 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg>
-      </a>
+      
     </div>
     <aside class="hero__telemetry reveal" style="transition-delay:180ms">
       <div class="tel-row"><span class="tel-k mono">Methodology</span><span class="tel-v mono">analyse → model → build → test → optimise</span></div>
@@ -243,35 +239,13 @@ main{position:relative;z-index:2}
   </div>
 </section>
  
-<!-- SYSTEMS -->
-<section id="systems" class="systems section">
-  <div class="container">
-    <div class="systems__header reveal">
-      <span class="idx-tag mono">01 / SYSTEMS</span>
-      <h2 class="systems__title">Engineering systems — dashboard</h2>
-      <p class="systems__desc">Three layers compose my working method. The fluid-dynamics layer drives decisions; the CAD layer executes them as manufacturable geometry; the experimental layer validates the result and feeds correction back upstream. Every project below embodies these three layers in one way or another.</p>
-    </div>
-    <div class="systems__pipeline reveal">
-      <div class="pipe-step"><span class="pipe-step__n mono">01</span><span class="pipe-step__label mono">Analyse</span></div>
-      <span class="pipe-edge"></span>
-      <div class="pipe-step"><span class="pipe-step__n mono">02</span><span class="pipe-step__label mono">Model</span></div>
-      <span class="pipe-edge"></span>
-      <div class="pipe-step"><span class="pipe-step__n mono">03</span><span class="pipe-step__label mono">Build</span></div>
-      <span class="pipe-edge"></span>
-      <div class="pipe-step"><span class="pipe-step__n mono">04</span><span class="pipe-step__label mono">Test</span></div>
-      <span class="pipe-edge"></span>
-      <div class="pipe-step pipe-step--active"><span class="pipe-step__n mono">05</span><span class="pipe-step__label mono">Optimise</span></div>
-    </div>
-    <div class="systems__grid" id="sys-grid"></div>
-  </div>
-</section>
- 
+
 <!-- PROJECTS -->
 <section id="projects" class="projects section">
   <div class="container">
     <header class="projects__header reveal">
-      <span class="idx-tag mono">02 / PROJECTS</span>
-      <h2 class="projects__title">Case studies — engineering record</h2>
+      <span class="idx-tag mono">01 / PROJECTS</span>
+      <h2 class="projects__title">Engineering record</h2>
       <p class="projects__desc">Here are five projects covering different areas of engineering: a national-level competition project, a scholarship interview and technical defence, an independent research paper, an in-house wind tunnel build, and an ongoing capstone project. Each entry is structured around the problem, methodology, contribution, optimisation process, and final outcome so it is easy to see not just what I built, but how I approached decisions, solved trade-offs, and contributed technically throughout the project lifecycle.</p>
     </header>
     <ul class="projects__list" id="prj-list"></ul>
@@ -285,7 +259,7 @@ main{position:relative;z-index:2}
     <div class="footer__top">
       <div class="footer__col">
         <span class="idx-tag mono">END · TRANSMISSION</span>
-        <p class="footer__statement">Geometry is the easy part. The hard part is knowing which questions to ask.</p>
+        <p class="footer__statement">"Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it." — Sir Henry Royce</p>
       </div>
       <div class="footer__col">
         <div class="footer__meta-row"><span class="mono footer__k">Contact</span><span class="mono footer__v">14pranitmalhotra@gmail.com</span></div>
@@ -304,74 +278,7 @@ main{position:relative;z-index:2}
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js';
  
 // ─── DATA ───
-const systems = [
-  { 
-  id:'SYS-01',
-  code:'FLD',
-  name:'Fluid Dynamics — analytical layer',
 
-  summary:'This is where I make the main aerodynamic decisions. Before any geometry is manufactured, I simulate the flow around the design to understand separation behaviour, wake structure, and pressure distribution. That means design choices are driven by evidence from the flow field rather than intuition alone.',
-
-  methods:[
-    'RANS CFD using k-ω SST turbulence modelling (OpenFOAM, simpleFoam)',
-    'Boundary-layer analysis and separation-point tracking',
-    'Surface Cp mapping with drag and lift breakdown by component',
-    'Wake-width and turbulence-intensity analysis to support physical testing'
-  ],
-
-  enables:'I can directly link each geometry change to a measurable aerodynamic effect, allowing me to prioritise the variables that have the greatest impact on performance.',
-
-  metrics:[
-    {k:'Reynolds range',v:'10⁴ – 10⁶'},
-    {k:'Solver class',v:'RANS / LES'}
-  ]
-},
-
-{ 
-  id:'SYS-02',
-  code:'CAD',
-  name:'CAD — execution layer',
-
-  summary:'This is where I turn aerodynamic decisions into manufacturable geometry. The models are fully parametric, so when CFD highlights a change, whether that is a taper angle, fillet radius, or camber profile, I can quickly adjust and re-test the design without rebuilding everything from scratch.',
-
-  methods:[
-    'Parametric solid modelling (Fusion 360, SolidWorks)',
-    'G2 / G3 surface continuity across aero-critical regions',
-    'Design-for-manufacture constraints based on CNC, FDM, and hand-finishing methods',
-    'Simulation-linked variable tables for rapid iteration'
-  ],
-
-  enables:'I can adapt the geometry quickly when simulation results or manufacturing constraints change, which keeps the development cycle efficient and flexible.',
-
-  metrics:[
-    {k:'Iteration cycle',v:'< 30 min'},
-    {k:'Param coupling',v:'full chain'}
-  ]
-},
-
-{ 
-  id:'SYS-03',
-  code:'EXP',
-  name:'Experimental — validation layer',
-
-  summary:'This is the stage where I validate simulation against real-world testing. I use experimental measurements to confirm CFD predictions, identify any deviations, and improve the accuracy of future simulations through calibrated feedback.',
-
-  methods:[
-    'In-house open-circuit wind tunnel characterised against pitot reference measurements',
-    'Pitot rake and pressure-tap arrays for velocity and Cp profiling',
-    'Flow visualisation using tuft and smoke testing for separation analysis',
-    'Simulation-versus-test correlation with uncertainty quantification'
-  ],
-
-  enables:'I can verify that aerodynamic improvements seen in simulation still perform under real flow conditions, while also using any discrepancies to refine the next CFD cycle.',
-
-  metrics:[
-    {k:'Test velocity',v:'0 – 25 m/s'},
-    {k:'Sample rate',v:'≤ 1 kHz'}
-  ]
-}
-];
- 
 const projects = [
 { 
   id:'PRJ-01',
@@ -379,7 +286,7 @@ const projects = [
   title:'F1 in Schools',
   subtitle:'3rd Place — National Finals',
   domain:'Aerodynamic Optimisation',
-  year:'2024',
+  year:'2025',
   status:'Completed',
 
   problem:'The challenge was to design a CO₂-powered scale car with the lowest possible drag while staying inside strict body-volume and mass constraints. The competition field included regional-champion teams, many with significantly larger fabrication budgets and access to higher-end manufacturing.',
@@ -412,7 +319,7 @@ const projects = [
   title:'Arkwright Engineering Scholarship',
   subtitle:'Selective National Recognition',
   domain:'Engineering Aptitude',
-  year:'2023',
+  year:'2026',
   status:'Awarded',
 
   problem:'The scholarship process involved both a timed aptitude examination and a technical interview centred around defending an original engineering proposal. The assessment focused heavily on analytical reasoning, technical judgement, and the ability to justify trade-offs under scrutiny.',
@@ -443,7 +350,7 @@ const projects = [
   title:'Ionic Wind × Shark Skin Biomimicry',
   subtitle:'Research Paper — Bio-inspired Fluid Dynamics',
   domain:'Independent Research',
-  year:'2024',
+  year:'2026-27',
   status:'In Progress',
 
   problem:'Electrohydrodynamic thrusters often suffer from unstable corona discharge and low thrust efficiency at higher voltages. I explored whether riblet-like surface structures inspired by shark skin could stabilise the ion-laden boundary layer and improve thrust behaviour.',
@@ -475,7 +382,7 @@ const projects = [
   title:'Wind Tunnel Development',
   subtitle:'In-House Validation Instrument',
   domain:'Instrumentation Design',
-  year:'2024 – 2025',
+  year:'2025 – 2026',
   status:'Completed',
 
   problem:'I wanted a reliable way to validate CFD work experimentally, but most school-accessible wind tunnels either lacked measurement quality or produced turbulence levels too high for meaningful aerodynamic comparison. Commercial systems were also financially unrealistic.',
@@ -508,7 +415,7 @@ const projects = [
   title:'Morphing Wing RC Aircraft',
   subtitle:'Capstone — Adaptive Aerodynamics',
   domain:'Adaptive Systems',
-  year:'2025 – 2026',
+  year:'2026 – 2027',
   status:'Concept → Prototype',
   featured:true,
 
@@ -600,7 +507,7 @@ function renderProjects() {
             <div class="detail-block"><div class="detail-block__label-row"><span class="label">Problem</span><span class="detail-block__rule"></span></div><p class="detail-block__body">${p.problem}</p></div>
             <div class="detail-block"><div class="detail-block__label-row"><span class="label">Methodology</span><span class="detail-block__rule"></span></div><ol class="detail-block__list">${p.methodology.map((m,j)=>`<li><span class="detail-block__index mono">${String(j+1).padStart(2,'0')}</span><span>${m}</span></li>`).join('')}</ol></div>
             ${p.contribution?`<div class="detail-block"><div class="detail-block__label-row"><span class="label">Contribution</span><span class="detail-block__rule"></span></div><ol class="detail-block__list">${p.contribution.map((m,j)=>`<li><span class="detail-block__index mono">${String(j+1).padStart(2,'0')}</span><span>${m}</span></li>`).join('')}</ol></div>`:''}
-            <div class="detail-block detail-block--accent"><div class="detail-block__label-row"><span class="label">Optimisation</span><span class="detail-block__rule"></span></div><p class="detail-block__body">${p.optimisation}</p></div>
+            <div class="detail-block detail-block--accent"><div class="detail-block__label-row"><span class="label">Optimisation</span></div><p class="detail-block__body">${p.optimisation}</p></div>
             ${p.featured&&p.failure_mode?`<div class="detail-block"><div class="detail-block__label-row"><span class="label">Primary failure mode</span><span class="detail-block__rule"></span></div><p class="detail-block__body">${p.failure_mode}</p></div>`:''}
             ${p.featured&&p.uncertainty?`<div class="detail-block"><div class="detail-block__label-row"><span class="label">Key uncertainty</span><span class="detail-block__rule"></span></div><p class="detail-block__body">${p.uncertainty}</p></div>`:''}
             ${p.featured&&p.tradeoff?`<div class="detail-block"><div class="detail-block__label-row"><span class="label">Limiting trade-off</span><span class="detail-block__rule"></span></div><p class="detail-block__body">${p.tradeoff}</p></div>`:''}
